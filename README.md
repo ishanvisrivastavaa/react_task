@@ -1,8 +1,4 @@
-# React + Vite
+## 1 - install the node modules using npm i 
+## 2 - start the project using npm run dev 
+## 3 - search any name or movie name in seach box and there will be some result show up and we can click on the result to show its modal.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
