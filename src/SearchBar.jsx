@@ -13,7 +13,7 @@ import "./SearchBar.css";
 const SearchBar = () => {
   const dispatch = useDispatch();
   const { results, query } = useSelector((state) => state.search);
-  const [selectedResult, setSelectedResult] = useState(null);
+  const [modalResult, setmodalResult] = useState(null);
 
   useEffect(() => {
     // console.log("query", query);
@@ -29,11 +29,11 @@ const SearchBar = () => {
   };
 
   const handleResultClick = (result) => {
-    setSelectedResult(result);
+    setmodalResult(result);
   };
 
   const handleCloseModal = () => {
-    setSelectedResult(null);
+    setmodalResult(null);
   };
 
   return (
@@ -66,14 +66,14 @@ const SearchBar = () => {
           )}
         </div>
       )}
-      {selectedResult && (
+      {modalResult && (
         <div className="modal" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <span className="close" onClick={handleCloseModal}>
               &times;
             </span>
-            <h2>{selectedResult.title}</h2>
-            <p dangerouslySetInnerHTML={{ __html: selectedResult.snippet }} />
+            <h2>{modalResult.title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: modalResult.snippet }} />
           </div>
         </div>
       )}
